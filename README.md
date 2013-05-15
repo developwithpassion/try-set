@@ -10,15 +10,24 @@ NOTE: Dependencies are linked locally in the development environment via the [`p
 
 ## Usage
 
-Include initializer and use the initializer macro to define the initializer method and attributes.
+Include TrySet and use the try_set method to trigger setter methods on the receiver.
 
 ```ruby
 class SomeThing
-  include try_set
+  include TrySet
 
+  def initialize
+    @some_value = 42
+  end
+
+  def some_value=(new_value)
+    @some_value = new_value
+  end
 end
-```
 
+obj = SomeThing.new
+obj.try_set(:some_value, 33) #this works
+obj.try_set(:some_non_existant_value, 42) #this does not cause a failure
 ```
 
 ## License
