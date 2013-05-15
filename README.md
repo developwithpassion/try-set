@@ -1,6 +1,6 @@
-# Initializer
+# try_set
 
-The `initializer` library defines initializers that receive parameters and assign to attributes. It also defines the attributes, allowing the attribute visibility to be declared as well.
+The `try_set` library allows for attempts to be made to trigger setter style methods on objects. Triggering a try_set method will invoke the method if it exists on the target, and it will not fail if the method does not exist on the target, and it will not fail if the method does not exist on the target
 
 ## Status
 
@@ -13,34 +13,14 @@ NOTE: Dependencies are linked locally in the development environment via the [`p
 Include initializer and use the initializer macro to define the initializer method and attributes.
 
 ```ruby
-class SomeItem
-  include initializer
+class SomeThing
+  include try_set
 
-  initializer :name, :age, :address
 end
 ```
 
-The above usage would be the equivalent of:
-
-```ruby
-class SomeItem
-  attr_accessor :name, :age, :address
-  def initialize(name, age, address)
-    @name = name
-    @age = age
-    @address = address
-  end
-end
 ```
-
-## Demonstrations
-
-See demonstration code at: https://github.com/Sans/initializer/tree/master/proofs/demos
-
-## TODO
-
-Document the attribute visibility syntax
 
 ## License
 
-Initializer is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+try_set is released under the [MIT License](http://www.opensource.org/licenses/MIT).
