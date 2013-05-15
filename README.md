@@ -1,6 +1,6 @@
 # try_set
 
-The `try_set` library allows for attempts to be made to trigger setter style methods on objects. Triggering a try_set method will invoke the method if it exists on the target, and it will not fail if the method does not exist on the target, and it will not fail if the method does not exist on the target
+The `try_set` library allows for attempts to be made to trigger setter style methods on objects. Triggering a try_set method will invoke the method if it exists on the target, and it will not fail if the method does not exist on the target.
 
 ## Status
 
